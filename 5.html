@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+    <style>
+        ol {
+            list-style-type: decimal;
+        }
+
+        .upper-roman {
+            list-style-type: upper-roman;
+        }
+
+        .lower-roman {
+            list-style-type: lower-roman;
+        }
+
+        .circle {
+            list-style-type: circle;
+        }
+
+        .square {
+            list-style-type: square;
+        }
+
+        .disc {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>LISTS</h2>
+    <ol>
+        <li>Main Topic 1</li>
+        <ol class="upper-roman">
+            <li>Topic 1</li>
+            <li>Topic 2</li>
+            <ul class="circle">
+                <li>Subtopic 1</li>
+                <ul class="square">
+                    <li>Mini Topic 1</li>
+                    <li>Mini Topic 2</li>
+                    <li>Mini Topic 3</li>
+                </ul>
+                <li>Subtopic 2</li>
+            </ul>
+            <li>Topic 3</li>
+            <ol class="lower-roman">
+                <li>Subtopic 1</li>
+                <li>Subtopic 2</li>
+                <ul class="disc">
+                    <li>Mini Topic 1</li>
+                    <li>Mini Topic 2</li>
+                </ul>
+                <li>Subtopic 3</li>
+            </ol>
+        </ol>
+        <li>Main Topic 2</li>
+        <li>Main Topic 3</li>
+        <ul class="square">
+            <li>Mini Topic 1</li>
+            <li>Mini Topic 2</li>
+            <li>Mini Topic 3</li>
+        </ul>
+    </ol>
+</body>
+
+</html>

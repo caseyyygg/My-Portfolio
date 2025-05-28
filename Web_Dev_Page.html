@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css" />
+    <title>Wed Developer's Page</title> 
+    <style>
+        .section { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Home" class="section active">
+            <h1>Hi!</h1>
+            <h2>Welcome to My Developer Page!</h2>
+            <nav>
+                <button onclick="showSection('About')">About</button>
+                <button onclick="showSection('Biography')">Biography</button>
+                <button onclick="showSection('Education')">Education</button>
+                <button onclick="showSection('Hobbies')">Hobbies</button>
+                <button onclick="showSection('Skills')">Skills</button>
+            </nav>
+        </div>
+
+        <div id="About" class="section">
+            <h1>ABOUT</h1>
+        <div class="box">
+            <p>Hello! I'm Casey Gabrielle Ocumin, a passionate student web developer dedicated to creating engaging and user-friendly websites. As I continue my journey in web development, I strive to learn and grow with every project, bringing creativity and functionality together to craft meaningful digital experiences.</p>
+        </div>
+            <button onclick="showSection('Home')">Back</button>
+        </div>
+
+        <div id="Biography" class="section">
+            <h1>BIOGRAPHY</h1>
+            <div class="box">
+            <p>
+                Casey Gabrielle Ocumin is an aspiring web developer with a deep passion for technology and its impact on the modern world. From an early age, Casey was captivated by programming, always eager to explore how digital systems function behind the scenes. This curiosity eventually grew into a strong interest in web development, where creativity meets functionality.
+            </p>
+            <p>
+                Currently pursuing a Bachelor of Science in Computer Science at the University of the East Manila (Class of 2027), Casey is dedicated to mastering various programming languages, web technologies, and software development principles. With a keen eye for design and user experience, Casey strives to build intuitive and engaging digital solutions.
+            </p>
+            <p>   
+                Beyond academics, Casey enjoys exploring new advancements in technology, coding innovative projects, and continuously refining their skills. With a strong commitment to learning and growth, Casey aims to contribute to the ever-evolving digital landscape by developing meaningful and impactful web experiences.
+            </p>
+        </div>
+            <button onclick="showSection('Home')">Back</button>
+        </div>
+
+ 
+        <div id="Education" class="section">
+            <h1>EDUCATION</h1>
+            <div class="box">
+            <p>Elementary School: University of the East, Caloocan</p>
+            <p>Highschool: Santa Isabel College of Manila</p>
+            <p>Bachelor of Science in Computer Science: University of the East, Manila (Expected Graduation: 2027)</p>
+            </div>
+            <button onclick="showSection('Home')">Back</button>
+        </div>
+
+
+        <div id="Hobbies" class="section">
+            <h1>HOBBIES & INTERESTS</h1>
+            <div class="box">
+            <ul>
+                <li>Coding & Web Development</li>
+                <li>UI/UX Design</li>
+                <li>Gaming</li>
+                <li>Photography</li>
+            </ul>
+        </div>
+            <button onclick="showSection('Home')">Back</button>
+        </div>
+
+        <div id="Skills" class="section">
+            <h1>SKILLS</h1>
+            <div class="box">
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Backend Development (Python)</li>
+                <li>Database Management (MySQL)</li>
+                <li>Object-Oriented Programming (Java, C++)</li>
+            </ul>
+            </div>
+            <button onclick="showSection('Home')">Back</button>
+        </div>
+
+        <script>
+            function showSection(sectionId) {
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                    section.style.display = 'none'; // Hide all sections
+                });
+
+                // Show the selected section
+                const selectedSection = document.getElementById(sectionId);
+                if (selectedSection) {
+                    selectedSection.classList.add('active');
+                    selectedSection.style.display = 'block';
+                }
+            }
+        </script>
+</body>
+</html>

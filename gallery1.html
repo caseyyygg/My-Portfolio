@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawers</title>
+    <style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(251, 247, 226); 
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .product {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }        
+
+    .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .product h3 {
+        font-size: 18px;
+        margin: 10px 0 5px;
+    }
+
+    .price {
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+    }
+
+    .prices{
+        font-size: 13px;
+        color: red;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        color: gray;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .custom-options {
+        font-size: 14px;
+        color: gray;
+    }
+
+    @media (max-width: 900px) {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: rgb(0, 16, 80);
+    }
+
+    .header-left a {
+        font-size: 1.5em;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .header-left a:hover {
+        transform: scale(1.1);
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul a {
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        margin-left: 20px;
+        transition: transform 0.3s ease-in-out;
+        color: white;
+    }
+
+    li:hover {
+        transform: scale(1.2);
+    }  
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="category.html">Ki Shin Gallery</a>
+        </div> 
+        <ul>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">DESIGN</a></li>        
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <a href="description.html">
+                <img src="https://www.ikea.com/ph/en/images/products/gursken-3-drawer-chest-light-beige__0923963_pe788460_s5.jpg?f=xl" alt="Tidewell">
+                <h3>Tidewell</h3>
+                <p class="custom-options">custom options available</p>
+                <p class="price">₱2,490</p>
+                <p class="prices">BEFORE: ₱3,790</p>
+            </a>
+        </div>
+
+        <div class="product">
+            <img src="https://www.ikea.com/ph/en/images/products/malm-4-drawer-chest-white__0484879_pe621344_s5.jpg?f=xl" alt="Orderly Oasis">
+            <h3>Orderly Oasis</h3>
+            <p class="custom-options">custom options available</p>
+            <p class="price">NOW: ₱2,990</p>
+            <p class="prices">BEFORE: ₱4,390</p>
+        </div>
+
+        <div class="product">
+            <img src="https://www.ikea.com/ph/en/images/products/bruksvara-wardrobe-with-2-doors-and-2-drawers-brown__1195913_pe902652_s5.jpg?f=xl" alt="The Stowaway">
+            <h3>The Stowaway</h3>
+            <p class="price">NOW: ₱6,990</p>
+            <p class="prices">BEFORE : ₱9,190</p>
+        </div>
+
+        <div class="product">
+            <img src="https://www.ikea.com/ph/en/images/products/kullen-2-drawer-chest-black-brown__0651177_pe706789_s5.jpg?f=xl" alt="Shadowbox Drawers">
+            <h3>Shadowbox Drawers</h3>
+            <p class="price">NOW: ₱990</p>
+            <p class="prices">BEFORE : ₱1,490</p>
+        </div>
+
+        <div class="product">
+            <img src="https://www.ikea.com/ph/en/images/products/hauga-6-drawer-dresser-beige__0949015_pe799471_s5.jpg?f=xl" alt="Whisper Wood Drawers">
+            <h3>Whisper Wood Drawers</h3>
+            <p class="custom-options">custom options available</p>
+            <p class="price">NOW: ₱11,490</p>
+            <p class="prices">BEFORE : ₱13,790</p>
+        </div>
+
+        <div class="product">
+            <img src="https://www.ikea.com/ph/en/images/products/malm-3-drawer-chest-white__0484875_pe621342_s5.jpg?f=xl" alt="Compartment Cove">
+            <h3>Compartment Cove</h3>
+            <p class="price">NOW: ₱4,590</p>
+            <p class="prices">BEFORE : ₱5,990</p>
+        </div>
+    </div>
+
+</body>
+</html>

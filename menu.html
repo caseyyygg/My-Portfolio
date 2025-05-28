@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1c3334;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1c3334;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #da7b93;
+        }
+
+        .back-btn {
+            background: transparent;
+            border: 2px solid #da7b93;
+            color: #da7b93;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #da7b93;
+            color: white;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            background-color: #1c3334;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Menu Section */
+        .menu-section {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+        
+        .menu-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .menu-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: #da7b93;
+        }
+        
+        .menu-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .menu-item {
+            background-color: #2e151b;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        .menu-item p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .menu-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #da7b93;
+        }
+        
+        .menu-btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: #da7b93;
+            border: 2px solid #da7b93;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-btn:hover {
+            background-color: #da7b93;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2e151b;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .menu-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .menu-title {
+                font-size: 2.5rem;
+            }
+
+            .menu-container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .menu-section {
+                padding: 2rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-title {
+                font-size: 2rem;
+            }
+
+            .menu-container {
+                padding: 1.5rem;
+            }
+
+            .menu-item {
+                padding: 1.5rem;
+            }
+
+            .menu-icon {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">My Portfolio</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html" class="back-btn">← Back</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="mobile-nav" id="mobileNav">
+                <ul>
+                    <li><a href="index.html#home" onclick="closeMobileMenu()">Home</a></li>
+                    <li><a href="index.html#projects" onclick="closeMobileMenu()">Projects</a></li>
+                    <li><a href="index.html#skills" onclick="closeMobileMenu()">Skills</a></li>
+                    <li><a href="index.html#about" onclick="closeMobileMenu()">About</a></li>
+                    <li><a href="index.html" class="back-btn" onclick="closeMobileMenu()">← Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="menu-title">Portfolio <span class="highlight">Menu</span></h2>
+            
+            <div class="menu-container">
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <div class="menu-icon">🏠</div>
+                        <h3>Home</h3>
+                        <p>Return to the main page and view my introduction</p>
+                        <a href="index.html#home" class="menu-btn">Go to Home</a>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-icon">💼</div>
+                        <h3>Projects</h3>
+                        <p>View my latest web development projects</p>
+                        <a href="index.html#projects" class="menu-btn">View Projects</a>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-icon">🛠️</div>
+                        <h3>Skills</h3>
+                        <p>Explore my technical skills and expertise</p>
+                        <a href="index.html#skills" class="menu-btn">See Skills</a>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-icon">👩‍💻</div>
+                        <h3>About Me</h3>
+                        <p>Learn more about my background and interests</p>
+                        <a href="index.html#about" class="menu-btn">About Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Casey Gabrielle Ocumin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

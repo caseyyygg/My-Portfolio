@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidewell - Product Description</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(251, 247, 226);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 16px;
+            color: gray;
+            margin: 15px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .shop-button {
+            background-color: rgb(0, 16, 80);
+            color: white;
+        }
+
+        .shop-button:hover {
+            background-color: rgb(0, 25, 120);
+        }
+
+        .buy-button {
+            background-color: green;
+            color: white;
+        }
+
+        .buy-button:hover {
+            background-color: darkgreen;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgb(0, 16, 80);
+        }
+
+        .header-left a {
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .header-left a:hover {
+            transform: scale(1.1);
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul a {
+            color: white;
+            text-decoration: none;
+        }
+
+        li {
+            margin-left: 20px;
+            transition: transform 0.3s ease-in-out;
+            color: white;
+        }
+
+        li:hover {
+            transform: scale(1.2);
+        }  
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="gallery1.html">Ki Shin Gallery</a>
+        </div> 
+        <ul>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">DESIGN</a></li>        
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <img src="https://www.ikea.com/ph/en/images/products/gursken-3-drawer-chest-light-beige__0923963_pe788460_s5.jpg?f=xl" alt="Tidewell">
+        <h1>Tidewell</h1>
+        <p class="price">₱2,490</p>
+        <p class="description">The Tidewell 3-drawer chest is a versatile and elegant storage solution for any room. With its light beige finish and sleek design, it blends well with modern and classic interiors. The drawers glide smoothly, providing ample space for your essentials.</p>
+        
+        <div class="buttons">
+            <a href="gallery1.html" class="button shop-button">Back</a>
+            <a href="thank-you.html" class="button buy-button">Buy Now</a>
+        </div>
+    </div>
+
+</body>
+</html>
