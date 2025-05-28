@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>Personal Data Sheet</title>
+     <style>
+          @page {
+               size: A4;
+               margin: 20mm;
+          }
+
+          body {
+               font-family: Arial, sans-serif;
+               font-size: 12px;
+               margin: 0;
+               padding: 20mm;
+               background: white;
+          }
+
+          h1,
+          h2,
+          h3 {
+               text-align: center;
+               margin: 5px 0;
+          }
+
+          .section-title {
+               margin-top: 20px;
+               font-weight: bold;
+               text-decoration: underline;
+          }
+
+          table {
+               width: 100%;
+               border-collapse: collapse;
+               margin-top: 5px;
+          }
+
+          td {
+               vertical-align: top;
+               padding: 4px;
+          }
+
+          .label {
+               width: 20%;
+               font-weight: bold;
+          }
+
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          input[type="date"] {
+               width: 100%;
+               border: none;
+               border-bottom: 1px solid #000;
+               padding: 2px;
+               font-size: 12px;
+          }
+
+          .checkbox-group {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+               margin: 5px 0;
+          }
+
+          .checkbox-group label {
+               display: flex;
+               align-items: center;
+               gap: 4px;
+          }
+
+          .split-columns {
+               display: flex;
+               gap: 20px;
+          }
+
+          .split-columns>div {
+               flex: 1;
+          }
+
+          .logo-title {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+          }
+
+          .logo-circle {
+               width: 80px;
+               height: 80px;
+               border: 2px solid black;
+               border-radius: 50%;
+               text-align: center;
+               line-height: 80px;
+               font-weight: bold;
+          }
+
+          hr {
+               margin: 10px 0;
+          }
+     </style>
+</head>
+
+<body>
+
+     <div class="logo-title">
+          <div class="logo-circle">LOGO</div>
+          <div style="text-align: center; flex-grow: 1;">
+               <h2>SAMPLE UNIVERSITY</h2>
+               <div>ENROLLMENT SYSTEM</div>
+               <h3>PERSONAL DATA SHEET<br><small>(Graduate School, Law, Medicine)</small></h3>
+          </div>
+          <div style="width: 150px;">
+               <p>Program: <input type="text"></p>
+               <p>Student #: <input type="text"></p>
+          </div>
+     </div>
+
+     <hr>
+
+     <table>
+          <tr>
+               <td><b>SURNAME:</b> <input type="text"></td>
+               <td><b>GIVEN NAME:</b> <input type="text"></td>
+               <td><b>MIDDLE NAME:</b> <input type="text"></td>
+               <td><b>AUXILIARY NAME:</b> <input type="text" placeholder="Jr., I, II, III..."></td>
+          </tr>
+     </table>
+
+     <div class="section-title">STUDENT DETAILS:</div>
+
+     <table>
+          <tr>
+               <td class="label">City Address:</td>
+               <td><input type="text"></td>
+               <td>Zip Code:</td>
+               <td><input type="text"></td>
+          </tr>
+          <tr>
+               <td class="label">Tel. No.:</td>
+               <td><input type="text"></td>
+               <td>E-mail Address:</td>
+               <td><input type="email"></td>
+          </tr>
+          <tr>
+               <td class="label">Home Address:</td>
+               <td colspan="3"><input type="text"></td>
+          </tr>
+          <tr>
+               <td>Zip Code:</td>
+               <td><input type="text"></td>
+               <td>Region:</td>
+               <td><input type="text"></td>
+          </tr>
+          <tr>
+               <td>Birthday:</td>
+               <td><input type="date"></td>
+               <td>Age:</td>
+               <td><input type="text"></td>
+          </tr>
+          <tr>
+               <td>Birthplace:</td>
+               <td><input type="text"></td>
+               <td>Religion:</td>
+               <td><input type="text"></td>
+          </tr>
+          <tr>
+               <td>Citizenship:</td>
+               <td><input type="text"></td>
+               <td>Sex:</td>
+               <td><input type="text"></td>
+          </tr>
+     </table>
+
+     <p><b>Legal Status:</b></p>
+     <div class="checkbox-group">
+          <label><input type="checkbox"> Citizen of RP</label>
+          <label><input type="checkbox"> Permanent Resident</label>
+          <label><input type="checkbox"> Student Visa</label>
+          <label><input type="checkbox"> Child/Spouse Visa</label>
+          <label><input type="checkbox"> Other Visa</label>
+          <label><input type="checkbox"> Legal status not known</label>
+     </div>
+
+     <div class="split-columns">
+          <div>
+               <p><b>Civil Status:</b></p>
+               <div class="checkbox-group">
+                    <label><input type="checkbox"> Single</label>
+                    <label><input type="checkbox"> Married</label>
+                    <label><input type="checkbox"> Divorced</label>
+                    <label><input type="checkbox"> Widowed</label>
+                    <label><input type="checkbox"> Separated</label>
+               </div>
+          </div>
+
+          <div>
+               <p><b>Work Status:</b></p>
+               <div class="checkbox-group">
+                    <label><input type="checkbox"> Working</label>
+                    <label><input type="checkbox"> Not working</label>
+                    <span>If working: Office/Bus. Tel #: <input type="text"></span>
+               </div>
+          </div>
+     </div>
+
+     <div class="section-title">FATHER'S INFORMATION:</div>
+     <table>
+          <tr>
+               <td>Surname: <input type="text"></td>
+               <td>First Name: <input type="text"></td>
+               <td>Middle Name: <input type="text"></td>
+               <td>Auxiliary Name: <input type="text"></td>
+          </tr>
+          <tr>
+               <td colspan="2">Occupation/Employment: <input type="text"></td>
+               <td>Educational Attainment: <input type="text"></td>
+          </tr>
+          <tr>
+               <td colspan="3">Parent’s Address: <input type="text"></td>
+               <td>Zip Code: <input type="text"></td>
+          </tr>
+     </table>
+
+     <div class="section-title">MOTHER'S INFORMATION:</div>
+     <table>
+          <tr>
+               <td>Surname: <input type="text"></td>
+               <td>First Name: <input type="text"></td>
+               <td>Middle Name: <input type="text"></td>
+               <td>Auxiliary Name: <input type="text"></td>
+          </tr>
+          <tr>
+               <td colspan="2">Occupation/Employment: <input type="text"></td>
+               <td>Educational Attainment: <input type="text"></td>
+          </tr>
+          <tr>
+               <td colspan="3">Parent’s Tel. #: <input type="text"></td>
+          </tr>
+     </table>
+
+     <div class="section-title">GUARDIAN'S INFORMATION: <small>(If Applicable)</small></div>
+     <table>
+          <tr>
+               <td>Surname: <input type="text"></td>
+               <td>First Name: <input type="text"></td>
+               <td>Middle Name: <input type="text"></td>
+               <td>Auxiliary Name: <input type="text"></td>
+          </tr>
+          <tr>
+               <td colspan="2">Occupation/Employment: <input type="text"></td>
+               <td>Off./Bus. Tel. #: <input type="text"></td>
+          </tr>
+          <tr>
+               <td>Guardian's Address: <input type="text"></td>
+               <td>Zip Code: <input type="text"></td>
+               <td>Tel. #: <input type="text"></td>
+          </tr>
+     </table>
+
+</body>
+
+</html>
