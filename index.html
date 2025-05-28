@@ -413,6 +413,101 @@
                 height: 200px;
             }
         }
+
+        .contact-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #da7b93;
+}
+
+.contact-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.contact-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(218, 123, 147, 0.3);
+    border-color: #da7b93;
+    background: rgba(218, 123, 147, 0.2);
+}
+
+.contact-link i {
+    font-size: 1.2rem;
+}
+
+.instagram-link:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: #e6683c;
+}
+
+.email-link:hover {
+    background: #da7b93;
+    border-color: #da7b93;
+}
+
+.contact-link span {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .contact-link {
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .contact-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    .contact-link {
+        width: 180px;
+        padding: 0.7rem 1rem;
+    }
+    
+    .contact-title {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -554,17 +649,32 @@
     </section>
 
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm a web developer passionate about creating beautiful and functional websites. I'm currently learning and improving my skills in HTML, CSS, and JavaScript.</p>
-                    <p>I enjoy solving problems and turning ideas into reality through code. When I'm not coding, you can find me reading, hiking, or learning something new.</p>
-                    <p>I'm looking for opportunities to grow and collaborate on interesting projects.</p>
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm an aspiring web developer passionate about creating beautiful and functional websites. I'm currently learning and improving my skills in HTML, CSS, and JavaScript.</p>
+                <p>Education : University of the East of Manila</p>
+                <p>I'm looking for opportunities to grow and collaborate on interesting projects.</p>
+                
+                <!-- Contact Section -->
+                <div class="contact-section">
+                    <h3 class="contact-title">Want to contact me? Here's how to reach me</h3>
+                    <div class="contact-links">
+                        <a href="https://www.instagram.com/caseyyyggg/" target="_blank" class="contact-link instagram-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="mailto:caseyocumin1728@gmail.com" target="_blank" class="contact-link email-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
         <div class="container">
